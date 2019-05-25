@@ -16,26 +16,30 @@ public class HangMan {
 		boolean playing = true;
 		int selection = 0;
 		while (playing) {
-			System.out.println("\nPlease choose from the following");
-			System.out.println("1. Play Game");
-			System.out.println("2. Exit");
+			display("\nPlease choose from the following");
+			display("1. Play Game");
+			display("2. Exit");
 			selection = Integer.parseInt(sc.nextLine());
 			
 			switch (selection) {
 			case 1:
-				System.out.println("Playing Game");
+				display("Playing Game");
 				break;
 			case 2:
-				System.out.println("Closing application");
+				display("Closing application");
 				playing = false;
 				break;
 			}
 		}
 
 	}
+	
+	public void display(String message) {
+		System.out.println(message);
+	}
 
 	public HangMan() {
-		System.out.println("Hello World, welcome to HangMan!");
+		display("Hello World, welcome to HangMan!");
 		menu();
 	}
 
